@@ -1,0 +1,25 @@
+{
+  "name": "mongodb-logs-pm2",         
+  "version": "1.0.0",                
+  "description": "mongodb connection matrix", 
+  "main": "app.js",
+  "dependencies": {
+    "pmx": "latest",
+    "mongodb": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sharmasunny/mongodb-logs-pm2"
+  },
+  "config": {
+    "mongodb_url":"",
+    "refresh_rate": 5000
+  },
+  "apps": [{
+    "merge_logs": true,
+    "max_memory_restart": "200M",
+    "script": "app.js"
+  }],
+  "author": "sunny <sv.sunnysharma@gmail.com>",
+  "license": "MIT"
+}
